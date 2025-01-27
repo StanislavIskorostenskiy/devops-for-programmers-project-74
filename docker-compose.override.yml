@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   app:
@@ -10,3 +10,23 @@ services:
     volumes:
       - ./app:/app
     command: make dev
+    networks:
+      - my_network
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - app
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
+

@@ -1,0 +1,20 @@
+# Прокси-сервер для HTTP на 80 порту
+http://localhost {
+    redir https://localhost{uri} permanent
+}
+
+# Прокси-сервер для HTTPS на 443 порту
+https://localhost {
+    log {
+        format json
+    }
+
+    encode zstd
+    tls internal
+
+    handle /favicon.ico {
+        respond "Not Found" 404
+    }
+
+    reverse_proxy /* app:8080
+}
