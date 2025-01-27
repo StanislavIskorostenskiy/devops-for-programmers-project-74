@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    image: xmaoax/devops-for-programmers-project-74:latest
+    working_dir: /app
+    command: make test
