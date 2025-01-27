@@ -1,1 +1,2 @@
-
+[![Build and Test on Push](https://github.com/StanislavIskorostenskiy/devops-for-programmers-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/StanislavIskorostenskiy/devops-for-programmers-project-74/actions/workflows/push.yml)
+[![hexlet-check](https://github.com/StanislavIskorostenskiy/devops-for-programmers-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/StanislavIskorostenskiy/devops-for-programmers-project-74/actions/workflows/hexlet-check.yml)
